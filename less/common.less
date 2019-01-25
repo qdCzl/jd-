@@ -1,0 +1,73 @@
+@import './base.less';
+/* 自定义一个icon函数封装重复使用精灵图的代码  */
+#header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ccc;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    .logo{
+        //   display: block;
+          width: 1.6rem;
+          height: 0.9rem;;
+           background: url(../images/sprites.png);
+           background-size: 4rem 4rem;
+           background-position: 0 -2.2rem;
+           padding: .2rem;
+           background-origin: content-box;
+           background-clip: content-box;
+    }
+    form{
+        // 只有子元素才能使用弹性布局
+        flex: 1;
+        .icon-search{
+            display: block;
+            background: url(../images/sprites.png);
+            background-position: -1.2rem -2.2rem;
+            background-size: 4rem 4rem;
+            width: .4rem;
+            height: .4rem;
+            position: absolute;
+            top: .26rem;
+            left: 1.8rem;
+        }
+          input{
+          
+              border-radius: .35rem;
+              width: 100%;
+              height: .7rem;
+              font-size: .3rem;
+              padding-left: .6rem;
+          }
+    }
+    .login{
+        width: 1rem;
+        height:.9rem;
+        font-size: .28rem;
+        text-align: center;
+        line-height: .9rem;
+        color: white;
+    }
+}
+
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(213, 20, 51);
+    ul{     
+        display: flex;
+        li{
+            width: 20%;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+/* 自定义一个icon函数封装重复使用精灵图的代码  */
+#header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccc;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+#header .logo {
+  width: 1.6rem;
+  height: 0.9rem;
+  background: url(../images/sprites.png);
+  background-size: 4rem 4rem;
+  background-position: 0 -2.2rem;
+  padding: .2rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+#header form {
+  flex: 1;
+}
+#header form .icon-search {
+  display: block;
+  background: url(../images/sprites.png);
+  background-position: -1.2rem -2.2rem;
+  background-size: 4rem 4rem;
+  width: .4rem;
+  height: .4rem;
+  position: absolute;
+  top: .26rem;
+  left: 1.8rem;
+}
+#header form input {
+  border-radius: .35rem;
+  width: 100%;
+  height: .7rem;
+  font-size: .3rem;
+  padding-left: .6rem;
+}
+#header .login {
+  width: 1rem;
+  height: .9rem;
+  font-size: .28rem;
+  text-align: center;
+  line-height: .9rem;
+  color: white;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #d51433;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  width: 20%;
+}
+#footer ul li a {
+  display: block;
+}
+#footer ul li a img {
+  width: 100%;
+}
+/* 定义网站全局变量 */
+/* 京东红的主题色 */
+html {
+  /* 设置根元素大小为 26.6667vw 根元素在 375屏幕 1rem == 100px  只要把页面所有px单位缩小100倍 就是rem值 */
+  font-size: 13.33333vw;
+}
+/* 给所有标签都去除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  /* 移动端不允许网页出现横向滚动条 */
+  /* 而且页面都是全屏盛满 宽度通常100% */
+  /* 让盒模型的计算方式 固定为 设置 width 和 height 
+    如果 padding border 会把content内容挤小 */
+  /* 因为所有都要设置这个属性 放到*号里面 */
+  box-sizing: border-box;
+  /* 移动端一些能按住的元素会有一个高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+}
+/* 给body设置默认字体样式 */
+body {
+  font-family: '微软雅黑';
+  /* 移动端默认字体一般是14px */
+  font-size: 0.14rem;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+img {
+  /* 解决图片的3px间隙问题 */
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  /* 去掉内边框 */
+  outline: 0;
+}
+/* 定义一些重复边框类名 */
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#main {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: .9rem 0 1.2rem 0;
+  overflow: hidden;
+  display: flex;
+}
+#main .left {
+  width: 3rem;
+}
+#main .left .swiper-container {
+  height: 100%;
+}
+#main .left .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .left .swiper-container .swiper-slide ul li {
+  line-height: 46px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+#main .left .swiper-container .swiper-slide ul li.active a {
+  color: red;
+}
+#main .left .swiper-container .swiper-slide ul li a {
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+#main .right {
+  padding: 0 5px;
+}
+#main .right .top {
+  flex: 1;
+  height: 2rem;
+  padding: 5px 0;
+}
+#main .right .top a {
+  display: block;
+  width: 100%;
+}
+#main .right .top a img {
+  width: 100%;
+}
+#main .right .hot {
+  margin-top: .2rem;
+}
+#main .right .hot h4 {
+  font-size: .3rem;
+  font-weight: 600;
+  line-height: 0.5rem;
+  white-space: nowrap;
+}
+#main .right .hot .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#main .right .hot .nav a {
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+#main .right .hot .nav a p {
+  margin-top: 5px;
+}
+#main .right .hot .nav a img {
+  width: 1.5rem;
+}

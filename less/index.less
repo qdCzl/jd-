@@ -1,0 +1,150 @@
+/* 在index.less文件夹里面引入公共的base.less文件 */
+
+// @import '指定less文件的路径'
+@import './base.less';
+@import './common.less';
+/* 自定义一个icon函数封装重复使用精灵图的代码  */
+
+#slide{
+    width: 100%;
+     a{
+         display: block;
+         width: 100%;
+         img{
+             width: 100%;
+         }
+     }
+}
+#nav{
+    padding: .1rem;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+            width: 25%;
+            a{
+                text-align: center;
+                display: block;
+                img{
+                    width: 0.8rem;
+                }
+                P{
+                    margin:.1rem;
+                    font-size: .2rem;
+                }
+            }
+        }
+        
+    }
+}
+#main{
+    padding: .1rem;
+    background-color: #eee;
+    font-size: .28rem;
+    padding-bottom: 1.3rem;
+    .seckill{
+        background-color: #fff;
+        box-shadow: 0 0 .02rem .02rem pink;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            line-height: .6rem;
+            .left{
+                display: flex;
+                .seckill-icon{
+                    width: 0.4rem;
+                    height: 0.5rem;
+                    margin-left: 0.1rem;
+                }
+                .seckill-name{
+                    margin-left: 0.1rem;
+                    color: @main-color;
+                }
+                .seckill-downtime{
+                    margin-left: 0.1rem;
+                    span:not(:nth-child(3n)){
+                        background-color: #000;
+                        color: #fff;
+                        width: 0.3rem;
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 0.3rem;
+                    }
+                }
+                
+            }
+            .right{
+                .more{
+                    
+                    margin-right: .2rem;
+                }
+            }
+        }
+        .content{
+            ul{
+                display: flex;
+                li{
+                    width: 33.33%;
+                   a{
+                    display: block;
+                    text-align: center;
+                    font-size: .2rem;
+                    img{
+                        width: 2.2rem;
+                    }
+                    p{
+                        color: @main-color;
+                    }
+                    del{
+                        color: #ccc;
+                    }
+                   }
+                }
+            }
+        }
+    }
+    .jd-market{
+        margin-top: .1rem;
+        background-color: #fff;
+        box-shadow: 0 0 .02rem .02rem pink;
+        .title{
+            p{
+
+                font-size: .3rem;
+                width: 100%;
+                padding-left: .5rem;
+                position: relative;
+                &::before{
+                    content: '';
+                    width: .06rem;
+                    height: .2rem;
+                    background-color: @main-color;
+                    position: absolute;
+                    left: 0.35rem;
+                    top: .12rem;
+                }
+            }
+            
+        }
+        .content{
+            display: flex;
+           .left{
+               width: 50%;
+               img{
+                  width: 100%;
+                  height: 100%;
+               }
+           }
+            .right{
+                width: 50%;
+              a{
+                  display: block;
+                 img{
+                    width: 100%;
+                 } 
+              }
+            }
+        }
+    }
+}
